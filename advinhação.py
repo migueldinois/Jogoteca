@@ -10,13 +10,12 @@
 import random
 
 print("""
-      
-
-    ⋆ 1 - Facil (1 a 10)
-    ✧ 2 - Médio (1 a 20)
-    ☆ 3 - Difícil (1 a 100)
-    ★ 4 - Senai (1 á 1000)
-
+################################################
+#  ⋆ 1 - Fácil (1 a 10)                         #
+#  ✧ 2 - Médio (1 a 20)                        #               
+#  ☆ 3 - Difícil (1 a 100)                     #
+#  ★ 4 - Senai (1 á 1000)                      #
+################################################
 """)
 
 escolhendonivel = int(input("Qual nivel você gostaria de jogar?"))
