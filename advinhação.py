@@ -19,48 +19,39 @@ print("""
 """)
 
 escolhendonivel = int(input("Qual nivel você gostaria de jogar?"))
+valormaximo = 0
+
 
 # Nivel Noob
 if escolhendonivel == 1:
     print("Você escolheu o Nivel Noob!")
-    numero = random.randint(1, 10)
-    escolha = int(input("Escolha um número de 1 a 10!"))
-    if escolha == numero:
-        print("Parabéns!, você acertou!")   
-    else:
-        print(f"Você errou!, o número era: {numero}")
+    valormaximo = 10
 
 # Nivel Médio
 elif escolhendonivel == 2:
     print("Você escolheu o Nivel Médio!")
-    numero = random.randint(1, 20)
-    escolha = int(input("Escolha um número de 1 a 20!"))
-    if escolha == numero:
-        print("Parabéns!, você acertou!")   
-    else:
-        print(f"Você errou!, o número era: {numero}")
+    valormaximo = 20
 
 # Nivel Difícil
 elif escolhendonivel == 3:
     print("Você escolheu o Nivel Difícil!")
-    numero = random.randint(1, 100)
-    escolha = int(input("Escolha um número de 1 a 100!"))
-    if escolha == numero:
-        print("Parabéns!, você acertou!")   
-    else:
-        print(f"Você errou!, o número era: {numero}")
+    valormaximo = 100
 
-# Nivel Difícil
+# Nivel Senai
 elif escolhendonivel == 4:
     print("Você escolheu o Nivel Senai!")
-    numero = random.randint(1, 1000)
-    escolha = int(input("Escolha um número de 1 a 1000!"))
-    if escolha == numero:
-        print("Parabéns!, você acertou!")   
-    else:
-        print(f"Você errou!, o número era: {numero}")
+    valormaximo = 1000
 else:
     print("Você deve escolher uma dificuldade entre 1 e 4")
+
+numero = random.randint(1, valormaximo)
+escolha = int(input(f"Escolha um numero entre 1 á {valormaximo}"))
+
+if escolha == numero:
+        print("Parabéns!, você acertou!")   
+else:
+        print(f"Você errou!, o número era: {numero}")
+    
 
 
 
