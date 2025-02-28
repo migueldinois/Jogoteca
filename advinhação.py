@@ -44,14 +44,17 @@ elif escolhendonivel == 4:
 else:
     print("Você deve escolher uma dificuldade entre 1 e 4")
 
-numero = random.randint(1, valormaximo)
-escolha = int(input(f"Escolha um numero entre 1 á {valormaximo}"))
 
-if escolha == numero:
+if valormaximo >= 1:
+    numero = random.randint(1, valormaximo)
+    escolha = int(input(f"Escolha um numero entre 1 á {valormaximo}"))
+
+    if escolha == numero:
         print("Parabéns!, você acertou!")   
-else:
+    else:
         print(f"Você errou!, o número era: {numero}")
-    
+else:
+    print(f"Se lembre!")
 
 
 
