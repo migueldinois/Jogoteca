@@ -45,17 +45,26 @@ def jogoadivinhacao():
     else:
         print("Você deve escolher uma dificuldade entre 1 e 4")
 
-
+    vidas = 3
+    numero = random.randint(1, valormaximo)
     if valormaximo >= 1:
-        numero = random.randint(1, valormaximo)
-        escolha = int(input(f"Escolha um numero entre 1 á {valormaximo}"))
-
-        if escolha == numero:
-            print("Parabéns!, você acertou!")   
+        while vidas <= 3 and vidas >= 1:
+            escolha = int(input(f"Escolha um numero entre 1 á {valormaximo}"))
+            vidas = vidas - 1
+            if escolha == numero:
+                print("Parabéns!, você acertou!") 
+                break  
+            else:
+                print(f"Você errou!, te restam ainda mais: {vidas} vidas")
+                if escolha > numero:
+                    print(f"Dica: o número é menor")
+                else:
+                    print(f"Dica: o número é maior")
         else:
-            print(f"Você errou!, o número era: {numero}")
-    else:
-        print(f"Se lembre!")
+            print(f"Suas vidas acabaram!")    
+    if vidas == 0:
+        print(f"O número era {numero}")
+       
 
 
 
