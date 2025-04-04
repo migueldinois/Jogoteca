@@ -5,6 +5,7 @@ import parouimparcomandor
 import tabuada
 import festa
 import time
+import jokenpo2
 
 
 
@@ -43,7 +44,7 @@ while True:
         print("Espero que tenha se divertido!, até mais.")
         break
 
-    if opcaodejogo == 1:
+    elif opcaodejogo == 1:
         adivinhacao.jogoadivinhacao()
     elif opcaodejogo == 2:
         parouimparcomandor.parouimpar2()
@@ -51,4 +52,6 @@ while True:
         tabuada.tabuada()
     elif opcaodejogo == 4:
         festa.festinha()
+    elif opcaodejogo == 5:
+        jokenpo2.jokenpo()
 
