@@ -4,10 +4,13 @@ def elefante():
     texto = "incomodam, "
 
     while contador <= elefantes:
-        if contador % 2 != 0:
-            print(f"{contador} Elefante(s) incomodam muita gente")
+        if contador == 1:
+            print(f"1 Elefante incomoda muita gente")
+            contador = 2
+        if contador % 2 != 0: #IMPAR
+            print(f"{contador} Elefantes incomodam muita gente")
         else:
-            print(f"{contador} Elefante(s) {texto * contador}muito mais! ")
+            print(f"{contador} Elefantes {texto * (contador - 1)}incomodam muito mais! ")
         contador += 1
 if __name__ == "__main__":
     elefante()

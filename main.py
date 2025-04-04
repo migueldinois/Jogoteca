@@ -6,7 +6,7 @@ import tabuada
 import festa
 import time
 import jokenpo2
-
+import elefante
 
 
 print("""
@@ -35,6 +35,7 @@ while True:
     #   3 - Tabuadinha                             #
     #   4 - Verificador de festinha                #
     #   5 - Jokenpo                                #
+    #   6 - Elefante Musica                        #
     #   0 - SAIR                                   #
     ################################################
     """, )
@@ -54,4 +55,6 @@ while True:
         festa.festinha()
     elif opcaodejogo == 5:
         jokenpo2.jokenpo()
+    elif opcaodejogo == 6:
+        elefante.elefante()
 
