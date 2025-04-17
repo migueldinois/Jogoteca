@@ -6,8 +6,9 @@
 #Medio 1 a 20
 #Dificil 1 a 100
 #Senai 1 a 1000
-
 import random
+import time
+from sons import lose, win, noob, medio, dificil
 
 def jogoadivinhacao():
     print("""
@@ -27,16 +28,19 @@ def jogoadivinhacao():
     if escolhendonivel == 1:
         print("Você escolheu o Nivel Noob!")
         valormaximo = 10
+        noob()
 
     # Nivel Médio
     elif escolhendonivel == 2:
         print("Você escolheu o Nivel Médio!")
         valormaximo = 20
+        medio()
 
     # Nivel Difícil
     elif escolhendonivel == 3:
         print("Você escolheu o Nivel Difícil!")
         valormaximo = 100
+        dificil()
 
     # Nivel Senai
     elif escolhendonivel == 4:
@@ -52,6 +56,7 @@ def jogoadivinhacao():
             escolha = int(input(f"Escolha um numero entre 1 á {valormaximo}"))
             vidas = vidas - 1
             if escolha == numero:
+                win()
                 print("Parabéns!, você acertou!") 
                 break  
             else:
@@ -61,6 +66,7 @@ def jogoadivinhacao():
                 else:
                     print(f"Dica: o número é maior")
         else:
+            lose()
             print(f"Suas vidas acabaram!")    
     if vidas == 0:
         print(f"O número era {numero}")
