@@ -6,7 +6,7 @@ sons = [300, 500, 800, 1000]
 sequencia = []
 contador = 0
 indice = 0 
-
+qnt = len(sequencia)
 
 # Mensagens de boas vindas e ensinando
 print("Bem vindo ao jogo!, seu objetivo é memorizar a sequência que irá tocar os sons!, Boa sorte amigo!")
@@ -17,7 +17,7 @@ input("Pressione enter para ir para a próxima página")
 # Mostrando as frequencias
 print("Preste atenção que iria te mostrar o som e seus números!, está em ordem 0,1,2,3")
 time.sleep(2)
-for primeiro in sons:
+for primeiro in sons: #for = percorrer, indo de 1 em 1
     print(f"Som {contador}:")
     w.Beep(primeiro, 500) # esse for primeiro seria que PARA primeiro (variavel descartavel), dentro de sons IN, ele vai fazer isso 4 vezes pois tem 4 itens na lista
     contador += 1
@@ -40,16 +40,20 @@ while True:
     vencedor = True
     for numero in chute:
         numero = int(numero)
-        if sons[numero] != sons[indice]:
-            print("Você errou a frequência!")
-            vencedor = False
+        if chute == qnt: # Len é para saber a quantidade de palavras que tem na lista (numeros ou palavras)
+            if sons[numero] != sons[indice]:
+                print(f"Você errou a frequência {chute}!")
+                vencedor = False
+            
         indice += 1
     if vencedor == False:
         print("Você Perdeu!")
+        break
 
-    # if chute == som_escolhido[indice]:
-    #     print("Parábens!, você acertou a sequencia!")
+
+    if vencedor == True:
+        print("Parábens!, você acertou a sequencia!")
         
 
 
-    indice += 1
+
